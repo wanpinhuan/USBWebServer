@@ -2,8 +2,13 @@
 
 Most light weight local portable web server with Apache, PHP, MySQL and PHPMyAdmin for Windows on the Web. Just unzip enywhere (including USB flash drive), run and start using.
 
-remembering that this is not my project. It is part of the original site that is in the description, I just updated it. 
+remembering that this is not my project. It is part of the original site that is in the description, I just updated it.
 
+## App Error
+
+[Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+
+[NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
 ## Database Access
 
 1. Login: root
