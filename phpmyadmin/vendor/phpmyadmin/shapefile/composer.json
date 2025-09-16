@@ -1,7 +1,7 @@
 {
     "name": "phpmyadmin/shapefile",
     "description": "ESRI ShapeFile library for PHP",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "keywords": ["shapefile", "shp", "geo", "geospatial", "dbf", "ESRI", "shape"],
     "homepage": "https://github.com/phpmyadmin/shapefile",
     "authors": [
@@ -15,19 +15,46 @@
         "issues": "https://github.com/phpmyadmin/shapefile/issues",
         "source": "https://github.com/phpmyadmin/shapefile"
     },
+    "scripts": {
+        "phpcbf": "@php phpcbf",
+        "phpcs": "@php phpcs",
+        "phpstan": "@php phpstan analyse",
+        "phpunit": "@php phpunit --color=always",
+        "test": [
+            "@phpcs",
+            "@phpstan",
+            "@phpunit"
+        ],
+        "update:baselines": [
+            "@php phpstan analyse --generate-baseline"
+        ]
+    },
     "require": {
-        "php": ">=5.4.0"
+        "php": "^7.1 || ^8.0"
     },
     "suggest": {
         "ext-dbase": "For dbf files parsing"
     },
     "require-dev": {
-        "phpunit/php-code-coverage": "*",
-        "phpunit/phpunit": "~4.8 || ~5.7"
+        "phpmyadmin/coding-standard": "^3.0.0",
+        "phpstan/phpstan": "^1.4.10",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.3"
     },
     "autoload": {
         "psr-4": {
             "PhpMyAdmin\\ShapeFile\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpMyAdminTest\\ShapeFile\\": "tests"
+        }
+    },
+    "config":{
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
