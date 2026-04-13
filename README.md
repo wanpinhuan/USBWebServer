@@ -23,7 +23,7 @@ remembering that this is not my project. It is part of the original site that is
 
 * Update: Apache version - 2.4.65
 * Update: PHP versions - 8.4.12 
-* Update: PHPMyAdmin version - 5.2.2
+* Update: PHPMyAdmin version - 5.2.3
 * Update: MySQL version - 8.0.41
 
 ## Official Web Site
